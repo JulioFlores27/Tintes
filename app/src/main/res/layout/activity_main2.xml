@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.julioflores.prueba2.Main2Activity"
+    android:orientation="vertical"
+    android:layout_margin="5pt">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/id1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+        <EditText
+            android:id="@+id/t1"
+            android:layout_width="100pt"
+            android:layout_height="20pt"
+            android:layout_gravity="center_horizontal"
+            android:hint="Fecha Asignada"
+            android:layout_marginTop="100dp"
+            android:enabled="false"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/t2"
+            android:layout_width="100pt"
+            android:layout_height="20pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:hint="Fecha Aprobada"
+            android:enabled="false"
+            android:visibility="invisible"/>
+
+        <Spinner
+            android:id="@+id/sp2"
+            android:layout_width="100pt"
+            android:layout_height="20pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:entries="@array/nombres"/>
+
+        <Spinner
+            android:id="@+id/sp1"
+            android:layout_width="100pt"
+            android:layout_height="20pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="250dp"/>
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="100pt"
+            android:layout_height="20pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:text="Guardar"/>
+    </FrameLayout>
+</LinearLayout>

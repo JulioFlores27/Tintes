@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">prueba2</string>
+    <string-array name="nombres">
+        <item>Arnold</item>
+        <item>Marco</item>
+        <item>Geovannie</item>
+        <item>Julio</item>
+        <item>Miguel</item>
+        <item>Neri</item>
+        <item>Armando N</item>
+        <item>Gildardo</item>
+    </string-array>
+</resources>
