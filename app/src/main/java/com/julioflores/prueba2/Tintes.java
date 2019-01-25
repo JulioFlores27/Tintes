@@ -1,7 +1,7 @@
 package com.julioflores.prueba2;
 
 public class Tintes {
-    private int id, nopedido, cantidad;
+    private int id, nopedido, cantidad, nointentos, lote;
     private String producto, observaciones, tipoenvase, etapa1, personaasignada;
     private String fechacaptura, fechaasigacion, fechaaprobacion;
 
@@ -9,8 +9,8 @@ public class Tintes {
 
     }
 
-    public Tintes(int id, int nopedido, int cantidad, String producto, String observaciones, String tipoenvase, String etapa1,
-                  String personaasignada, String fechacaptura, String fechaasigacion, String fechaaprobacion) {
+    public Tintes(int id, int nopedido, int cantidad, int lote, String producto, String observaciones, String tipoenvase, String etapa1,
+                  String personaasignada, String fechacaptura, String fechaasigacion, String fechaaprobacion, int nointentos) {
         this.id = id;
         this.nopedido = nopedido;
         this.cantidad = cantidad;
@@ -22,14 +22,24 @@ public class Tintes {
         this.fechacaptura = fechacaptura;
         this.fechaasigacion = fechaasigacion;
         this.fechaaprobacion = fechaaprobacion;
+        this.nointentos = nointentos;
+        this.lote = lote;
+    }
+
+    public int getLote() {
+        return lote;
+    }
+
+    public void setLote(int lote) {
+        this.lote = lote;
     }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
+
     public int getNopedido() {
         return nopedido;
     }
-
     public void setNopedido(int nopedido) {
         this.nopedido = nopedido;
     }
@@ -107,8 +117,12 @@ public class Tintes {
         this.fechaaprobacion = fechaaprobacion;
     }
 
+    public int getNointentos() { return nointentos; }
+    public void setNointentos(int nointentos) { this.nointentos = nointentos; }
+
     @Override
     public String toString() {
-        return id + " "+producto + nopedido + observaciones + cantidad + tipoenvase + fechacaptura + fechaasigacion + fechaaprobacion + personaasignada + etapa1;
+        return id + " "+producto + nopedido + observaciones + cantidad + tipoenvase + fechacaptura + fechaasigacion + fechaaprobacion + personaasignada +
+                etapa1 + nointentos + lote;
     }
 }

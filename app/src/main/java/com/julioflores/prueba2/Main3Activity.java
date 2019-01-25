@@ -21,29 +21,29 @@ public class Main3Activity extends ArrayAdapter <Tintes> {
         }
         Tintes currentPedidoEntinte = getItem(position);
 
-        TextView NoPedidoTextView = (TextView) listItemView.findViewById(R.id.NoPedido_entinte);
+        TextView NoPedidoTextView = listItemView.findViewById(R.id.NoPedido_entinte);
         NoPedidoTextView.setText(String.valueOf(currentPedidoEntinte.getNopedido()));
 
-        TextView ProductoEntinteTextView = (TextView) listItemView.findViewById(R.id.Producto_entinte);
+        TextView ProductoEntinteTextView = listItemView.findViewById(R.id.Producto_entinte);
         ProductoEntinteTextView.setText(currentPedidoEntinte.getProducto());
 
-        TextView ObservacionesTextView = (TextView) listItemView.findViewById(R.id.Observaciones_entinte);
+        TextView ObservacionesTextView = listItemView.findViewById(R.id.Observaciones_entinte);
         ObservacionesTextView.setText(currentPedidoEntinte.getObservaciones());
 
-        TextView Espiner = (TextView) listItemView.findViewById(R.id.Etapa1_entinte);
+        TextView Espiner = listItemView.findViewById(R.id.Etapa1_entinte);
         Espiner.setText(currentPedidoEntinte.getEtapa1());
 
-        TextView TipoEnvaseTextView = (TextView) listItemView.findViewById(R.id.TipoEnvase_entinte);
-        TipoEnvaseTextView.setText(currentPedidoEntinte.getCantidad()+" "+currentPedidoEntinte.getTipoenvase());
-
-        TextView PersonaAsignadaTextView = (TextView) listItemView.findViewById(R.id.PersonaAsignada_entinte);
+        TextView PersonaAsignadaTextView = listItemView.findViewById(R.id.PersonaAsignada_entinte);
         PersonaAsignadaTextView.setText((currentPedidoEntinte.getPersonaasignada()));
 
-        TextView FechaAsignacionTextView = (TextView) listItemView.findViewById(R.id.FechaAsignacion_entinte);
+        TextView FechaAsignacionTextView = listItemView.findViewById(R.id.FechaAsignacion_entinte);
         FechaAsignacionTextView.setText(currentPedidoEntinte.getFechaasigacion());
 
-        TextView FechaCapturaTextView = (TextView) listItemView.findViewById(R.id.FechaCaptura_entinte);
+        TextView FechaCapturaTextView = listItemView.findViewById(R.id.FechaCaptura_entinte);
         FechaCapturaTextView.setText(currentPedidoEntinte.getFechacaptura());
+
+        TextView lote_tintes = listItemView.findViewById(R.id.no_lote_tintes);
+        lote_tintes.setText(String.valueOf(currentPedidoEntinte.getLote()));
         return listItemView;
     }
 }
